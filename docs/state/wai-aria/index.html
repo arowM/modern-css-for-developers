@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Favorite Animal</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+    <label class="form_question" for="favoriteAnimal">好きな動物は？</label>
+    <div id="favoriteAnimal">
+      <select id="favoriteAnimal-main" class="form_question_controll form_question_controll-select">
+        <option value="goat" selected>ヤギが好き</option>
+        <option value="goat2">やっぱりヤギが好き</option>
+        <option value="goat3">とってもヤギが好き</option>
+        <option value="other">その他（正気か？？）</option>
+      </select>
+      <input type="text" id="favoriteAnimal-detail" aria-hidden="true" class="form_question_controll form_question_controll-textInput">
+    </div>
+    <script src="./index.js"></script>
+
+  </body>
+</html>

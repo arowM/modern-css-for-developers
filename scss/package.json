@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && parcel build src/index.html",
+    "build": "rimraf dist && parcel build --public-url /modern-css-for-developers/scss src/index.html",
     "start": "parcel src/index.html"
   },
   "author": "",

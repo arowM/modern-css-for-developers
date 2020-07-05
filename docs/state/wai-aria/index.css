@@ -1,0 +1,7 @@
+/* `form_question_controll`クラスを持つ属性が
+ * `aria-hidden`属性の値が`"true"`のときのみ...
+ */
+.form_question_controll[aria-hidden="true"] {
+  /* 表示しない */
+  display: none;
+}
