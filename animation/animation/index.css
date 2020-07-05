@@ -1,0 +1,48 @@
+/* 全状態で共通のスタイル */
+.camera_view {
+  border: solid 10px;
+  width: 30em;
+  height: 20em;
+}
+
+/* 初期状態 */
+.camera_view[data-shutter-status="init"] {
+  /* 枠線の色を黒色にする */
+  border-color: black;
+}
+
+/* 自動フォーカス状態 */
+.camera_view[data-shutter-status="focus"] {
+  /* 枠線の色を緑色にする */
+  border-color: green;
+  /* 黒色から滑らかに変化させる */
+  /* フォーカスが完了したら2回光らせる */
+  -webkit-animation: 800ms ease-out 1 focus, 100ms ease-out 800ms 1 flush, 100ms ease-out 1000ms 1 flush;
+          animation: 800ms ease-out 1 focus, 100ms ease-out 800ms 1 flush, 100ms ease-out 1000ms 1 flush;
+}
+
+/* 撮影中 */
+.camera_view[data-shutter-status="shooting"] {
+  /* 枠線の色を赤色にする */
+  border-color: red;
+}
+
+@-webkit-keyframes focus {
+  from { border-color: black; }
+  to   { border-color: green; }
+}
+
+@keyframes focus {
+  from { border-color: black; }
+  to   { border-color: green; }
+}
+
+@-webkit-keyframes flush {
+  from { border-color: white; }
+  to   { border-color: green; }
+}
+
+@keyframes flush {
+  from { border-color: white; }
+  to   { border-color: green; }
+}

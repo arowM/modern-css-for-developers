@@ -1,0 +1,60 @@
+@use 'variables' as *;
+
+/* Form buttons */
+.formButton {
+  border: $border-width solid;
+  border-radius: $button-radius;
+  padding: $button-padding;
+  min-width: $button-min-width;
+  cursor: pointer;
+  font-weight: bold;
+
+  &-main {
+    border-color: $main-color0;
+    background-color: $main-background0;
+    color: $main-color0;
+  }
+
+  &-mainInvert {
+    border-color: $main-color0;
+    background-color: $main-color0;
+    color: $main-background0;
+  }
+
+  &-sub {
+    border-color: $sub-color0;
+    background-color: $sub-background0;
+    color: $sub-color0;
+  }
+
+  &-subInvert {
+    border-color: $sub-color0;
+    background-color: $sub-color0;
+    color: $sub-background0;
+  }
+}
+
+/* Form controls */
+.formControl {
+  border: $border-width solid;
+  border-radius: $control-radius;
+  padding: $control-padding;
+  min-width: $control-min-width;
+
+  &-text {
+    border-color: $main-color0;
+    background-color: $main-background0;
+    color: $main-color0;
+  }
+}
+
+/* Specific to the page */
+$_default-padding: 0.4em;
+
+.styleGuide {
+  padding: $_default-padding;
+}
+
+.styleGuide_item {
+  padding: $_default-padding;
+}

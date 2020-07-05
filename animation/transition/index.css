@@ -1,0 +1,27 @@
+/* 全状態で共通のスタイル */
+.camera_view {
+  border: solid 10px;
+  width: 30em;
+  height: 20em;
+}
+
+/* 初期状態 */
+.camera_view[data-shutter-status="init"] {
+  /* 枠線の色を黒色にする */
+  border-color: black;
+}
+
+/* 自動フォーカス状態 */
+.camera_view[data-shutter-status="focus"] {
+  /* 枠線の色を緑色にする */
+  border-color: green;
+  /* 黒色から滑らかに変化させる */
+  -webkit-transition: border-color 800ms ease-out;
+  transition: border-color 800ms ease-out;
+}
+
+/* 撮影中 */
+.camera_view[data-shutter-status="shooting"] {
+  /* 枠線の色を赤色にする */
+  border-color: red;
+}
